@@ -73,7 +73,7 @@ def delete_helper(tree: BinTree, value: Any, comes_before: Callable[[Any, Any], 
                              
 def smallest_gone(tree: Node) -> tuple[Any, BinTree]:
     match tree:
-        case Node(value=v, l = None, right=r):
+        case Node(value = v, left = None, right = r):
             return (v, r)
         case Node(v, l, r):
             smallest, new = smallest_gone(l)
